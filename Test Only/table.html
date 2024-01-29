@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #table-container {
+            overflow: auto;
+            max-height: 500px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .options {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>Scrollable Table</title>
+</head>
+<body>
+    <div id="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>IO#</th>
+                    <th>Status</th>
+                    <th>CM</th>
+                    <th>BO / CE Ref</th>
+                    <th>Brand New</th>
+                    <th>Sub-Brand</th>
+                    <th>Brand + Sub Brand</th>
+                    <th>Business Model</th>
+                    <th>BM Codee</th>
+                    <th>Industry</th>
+                    <th>Campaign Name</th>
+                    <th>Complete Campaign Name</th>
+                    <th>Platform</th>
+                    <th>Buy Type</th>
+                    <th>Objective</th>
+                    <th>Conversion Location</th>
+                    <th>Performance Goal</th>
+                    <th>When you get charged</th>
+                    <th>Budget Allocation</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Budget</th>
+                    <th>FOREX</th>
+                    <th>Budget $</th>
+                    <th>Unit Cost</th>
+                    <th>KPI</th>
+                    <th>Margin/Fee</th>
+                    <th>BM Currency</th>
+                    <th>Media Budget</th>
+                    <th>Result</th>
+                    <th>Campaign ID</th>
+                    <th>Remarks</th>
+                    <th>IO #</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Generate 500 rows of random data for demonstration -->
+                <?php
+                for ($i = 1; $i <= 500; $i++) {
+                echo '
+                <tr>
+                    ';
+                    for ($j = 1; $j <= 36; $j++) {
+                    echo '
+                    <td>Data ' . $i . '-' . $j . '</td>';
+                    }
+                    echo '
+                </tr>';
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="options">
+        <label>Show:</label>
+        <select>
+            <option value="200">1-200 Results</option>
+            <option value="500">1-500 Results</option>
+            <option value="1000">1-1000 Results</option>
+            <option value="all">All Results</option>
+        </select>
+    </div>
+</body>
+</html>
