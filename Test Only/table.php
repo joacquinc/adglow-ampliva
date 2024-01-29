@@ -12,6 +12,9 @@ if ($resultOps) {
 }
 ?>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,7 +133,7 @@ if ($resultOps) {
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.1/daterangepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const table = document.querySelector('table');
@@ -225,32 +228,23 @@ if ($resultOps) {
                 rows.forEach(row => row.style.display = '');
             });
 
-            // JavaScript for date range picker and filtering based on Start Date
-            $('#daterange').daterangepicker({
-                opens: 'left'
-            }, function(start, end, label) {
-                const startDate = start.format('YYYY-MM-DD');
-                const endDate = end.format('YYYY-MM-DD');
-
-                rows.forEach(row => {
-                    const cellValue = row.children[21].textContent.trim(); // Assuming Start Date is in the 22nd column (index 21)
-                    row.style.display = (cellValue >= startDate && cellValue <= endDate) ? '' : 'none';
-                });
-            });
-
-            // JavaScript for dropdown with checkboxes
-            const dropdownCheckboxes = document.querySelectorAll('.dropdown-container input[type="checkbox"]');
-
-            dropdownCheckboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function () {
-                    const colIndex = parseInt(this.value, 10);
-                    const selectedValues = Array.from(document.querySelectorAll(`.dropdown-container input[value="${colIndex}"]:checked`)).map(input => input.nextSibling.textContent.trim());
+            // JavaScript for date range picker
+            const dateRangeInput = document.getElementById('daterange');
+            const dateRangePicker = new Pikaday({
+                field: dateRangeInput,
+                format: 'YYYY-MM-DD',
+                showYearDropdown: true,
+                yearRange: [1900, new Date().getFullYear()],
+                onSelect: function () {
+                    const dateRange = dateRangeInput.value.split(' - ');
+                    const startDate = new Date(dateRange[0]);
+                    const endDate = new Date(dateRange[1]);
 
                     rows.forEach(row => {
-                        const cellValue = row.children[colIndex].textContent.trim();
-                        row.style.display = selectedValues.length === 0 || selectedValues.includes(cellValue) ? '' : 'none';
+                        const cellValue = new Date(row.children[22].textContent.trim()); // Assuming Start Date is at index 22
+                        row.style.display = (cellValue >= startDate && cellValue <= endDate) ? '' : 'none';
                     });
-                });
+                }
             });
         });
     </script>
