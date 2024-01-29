@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampliva Customer Dashboard</title>
+    <link rel="stylesheet" href="styledash.css" />
+     <link rel="stylesheet" href="vanilla-datetimerange-picker.css" />
+    <script src="https://kit.fontawesome.com/cea0005bec.js" crossorigin="anonymous"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+ 
+        #table-container {
+            overflow: auto;
+            max-height: 90%;
+            max-width: 100%;
+            margin-bottom: 500px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        th, td {
+            border: 2px solid #4585c5;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color:  #e3e6ea;
+        }
+
+        .options {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+   
+
+
+
+
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <img src="shape.png" alt="" class="shape" />
+
+        <header>
+          <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" />
+               
+              
+            </div>
+
+            <div class="links">
+              <ul>         
+                <li><a href="#"><i class="fa-solid fa-user" style="color: #1d1b1b;"> </i>Jej Vilafane(client)-Grouap M Wavwmaker</a></li>
+                <li> <a href="#" class="logout"><i class="fa-solid fa-right-from-bracket" style="color: #1d1e20;"></i>Logout</a></li>
+              </ul>
+            </div>
+
+            
+        </header>
+
+       
+   
+        <div class="cta3">
+           
+    
+            <div class="header">
+                <div class="left">
+        
+                    <h3 style="text-align: center;color: #1d1b1b; margin-top: 19px ;font-style: oblique;">TikTok Brand</h3>
+                    
+                </div>
+            </div>
+        
+            
+                      
+                     
+            <style>
+                .dropdown {
+                  position: relative;
+                  display: inline-block;
+                
+                }
+            
+                .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #ffffff;
+                  min-width: 200px;
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                  padding: 12px;
+                  z-index: 1;
+               
+                }
+            
+                .dropdown:hover .dropdown-content {
+                  display: block;
+                }
+
+               
+                
+
+              </style>
+          
+          <div class="browse">
+              <div class="dropdown">
+                <button class="filter-button" onclick="toggleDropdown()">filters</button>
+               
+                
+
+                
+                <div class="dropdown-content" id="">
+                  
+                  <label for="item1">status</label><br>
+            
+                  <div class="nested-dropdown">
+                    <button onclick="toggleNestedDropdown()" style="margin-left: 18px;">campaign status</button>
+                    <div class="nested-dropdown-content">
+                      <input type="checkbox" id="item2" name="item2" value="item2" style="margin-left: 25px;">
+                      <label for="item2">ALL</label><br>
+                      <input type="checkbox" id="item2" name="item2" value="item2" style="margin-left: 25px;">
+                      <label for="item2">Active</label><br>
+                      <input type="checkbox" id="item2" name="item2" value="item2" style="margin-left: 25px;">
+                      <label for="item2">Not delivering</label><br>
+                      <input type="checkbox" id="item2" name="item2" value="item2" style="margin-left: 25px;">
+                      <label for="item2">inactive</label><br>
+                      <input type="checkbox" id="item2" name="item2" value="item2" style="margin-left: 25px;">
+                      <label for="item2">Deleted</label><br>
+                     
+                    
+                    </div>
+                  </div>
+                  <div class="nested-dropdown">
+                    <button onclick="toggleNestedDropdown()" style="margin-left: 18px;">Ad group status</button>
+                    <button onclick="toggleNestedDropdown()" style="margin-left: 18px;">Ad status</button>
+                  </div>
+               
+                 
+                </div>
+              </div>
+
+            
+              <script>
+                function toggleDropdown() {
+                  var checkboxes = document.getElementById("checkboxes");
+                  checkboxes.style.display = (checkboxes.style.display === "none") ? "block" : "none";
+                }
+            
+                function toggleNestedDropdown() {
+                  var nestedDropdown = document.querySelector(".nested-dropdown-content");
+                  nestedDropdown.style.display = (nestedDropdown.style.display === "none") ? "block" : "none";
+                }
+              </script>
+                              
+                                   <input type="search" placeholder="Search" class="search">
+                                   <input type="text" id="datetimerange-input1" size="24" style="margin-left:960px;">
+        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" type="text/javascript"></script>
+        <script src="vanilla-datetimerange-picker.js"></script>
+        <script>
+            window.addEventListener("load", function (event) {
+                new DateRangePicker('datetimerange-input1');
+            });
+        </script>
+                                   
+                                </div>
+                            </div>
+        
+        
+                            <div id="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>ADFLOW IO c/o adlglow team</th>
+                                            <th>CE# Reference</th>
+                                            <th>PO# Reference</th>
+                                            <th>Campaign Name</th>
+                                            <th>Buy Type</th>
+                                            <th>Feed Type (only if R&F)</th>
+                                            <th>Objective</th>
+                                            <th>Optimization</th>
+                                            <th>Frequency</th>
+                                            <th>Ad Type</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                            <th>BUDGET(PHP)</th>
+                                            <th>BUFGET(USD)</th>
+                                            <th>FOREX</th>
+                                            <th>MEDIA(PHP)</th>
+                                            <th>MEDIA(USD)</th>
+                                            <th>REMARKS</th>
+                                            <th>User Comment(Action and R&F)</th>
+                                            <th>Video Download(Ction and R&F)</th>
+                                            <th>Video Sharing(for R&F ONLY)</th>
+                                            <th>Ad Group Name (1:m)</th>
+                                            <th>DEMOGRAPHIC</th>
+                                            <th>AUDIENCE</th>
+                                            <th>Ad Name(1:m)</th>
+                                            <th>Ad Start Date</th>
+                                            <th>Ad End Date</th>
+                                            <th>Video Code(if Spark Ads)</th>
+                                            <th>CTA</th>
+                                            <th>Landing Page/UTM Link</th>
+                                            <th>Material Link (if Non Spark Ads)</th>
+                                            <th>Caption</th>
+                                            <th>CTA</th>
+                                            <th>Landing Page/UTM Link</th>
+                                            <th>Tiktok Account Name</th>
+                                            <th>Tiktok Account Ptofile Photo</th>
+                                            <th>Remarks</th>
+                                            <th>Unit Cost</th>
+                                            <th>KPI</th>
+                                            <th>ACTUAL</th>
+                                            <th>ACHIEVEMENT</th>
+                                            
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>topolu </td>
+                                            
+                                        </tr>
+                                        
+                                        
+                                    
+                                    </tbody>
+                                  
+                                </table>
+                            </div>
+                        
+                            <div class="options">
+                                <label>Show:</label>
+                                <select>
+                                    <option value="200">1-200 Results</option>
+                                    <option value="500">1-500 Results</option>
+                                    <option value="1000">1-1000 Results</option>
+                                    <option value="all">All Results</option>
+                                </select>
+                            </div>
+                    
+                </main>
+                
+          
+                 
+       
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="scriptsdash.js"></script>
+  </body>
+</html>
