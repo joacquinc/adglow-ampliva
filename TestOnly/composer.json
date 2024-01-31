@@ -1,0 +1,13 @@
+{
+    "name": "shreyansh/shreyansh",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Shreyansh Jain",
+            "email": "shreyanshmanishjain@gmail.com"
+        }
+    ],
+    "require": {
+        "nategood/httpful": "^0.3.2"
+    }
+}

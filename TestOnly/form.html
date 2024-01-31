@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add some basic styling for better appearance */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Dynamic Dropdown</title>
+</head>
+<body>
+    <form>
+        <label for="brand">Select Brand:</label>
+        <select id="brand" onchange="updateSubBrands()">
+            <option value="A">Brand A</option>
+            <option value="B">Brand B</option>
+            <option value="C">Brand C</option>
+        </select>
+
+        <label for="subBrand">Select Sub Brand:</label>
+        <select id="subBrand">
+            <!-- Options will be dynamically populated based on the selected brand -->
+        </select>
+    </form>
+
+    <script>
+        function updateSubBrands() {
+            var brandSelect = document.getElementById("brand");
+            var subBrandSelect = document.getElementById("subBrand");
+
+            // Clear existing options
+            subBrandSelect.innerHTML = "";
+
+            // Get the selected brand
+            var selectedBrand = brandSelect.value;
+
+            // Add options based on the selected brand
+            if (selectedBrand === "A") {
+                addOption(subBrandSelect, "SubBrand A");
+                addOption(subBrandSelect, "SubBrand B");
+            } else if (selectedBrand === "B") {
+                addOption(subBrandSelect, "SubBrand C");
+                addOption(subBrandSelect, "SubBrand D");
+            } else if (selectedBrand === "C") {
+                addOption(subBrandSelect, "SubBrand E");
+                addOption(subBrandSelect, "SubBrand F");
+            }
+        }
+
+        function addOption(selectElement, optionText) {
+            var option = document.createElement("option");
+            option.text = optionText;
+            selectElement.add(option);
+        }
+
+        // Initialize the Sub Brands dropdown on page load
+        updateSubBrands();
+    </script>
+</body>
+</html>

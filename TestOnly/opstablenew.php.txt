@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styleemp.css">
+    <title>Ampliva Employee Account</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>Ampliva</span></div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="ampliva-emp-dashboard.html"><i class='bx bxs-dashboard' ></i>Dashboard</a></li>
+            <li><a href="tasklists.html"><i class='bx bx-task' ></i>Task Lists</a></li>
+            <li><a href="campaigntracker.html"><i class='bx bx-bar-chart-alt-2'></i>Campaign Tracker</a></li>
+            <li><a href="empcustomermodule.html"><i class='bx bx-book-content'></i>Customer Module</a></li>
+            <li><a href="projects.html"><i class='bx bx-folder-open'></i>Projects</a></li>
+            <li><a href="customerdatabase.html"><i class='bx bxs-report' ></i>Customer Database</a></li>
+            <li><a href="dailymonitoring.html"><i class='bx bx-desktop'></i>Daily Monitoring</a></li>
+            <li class="active"><a href="opstable.html"><i class='bx bx-table'></i>Ops Table</a></li>
+            <li><a href="empprofile.html"><i class='bx bx-user-circle'></i>Profile</a></li>
+            <li><a href="empsettings.html"><i class='bx bx-cog' ></i>Settings</a></li>
+            
+          
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="logo.png">
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+         <!-- module Page-->
+         <div class="table_responsive">
+          <input type="text" id="myInput" placeholder="Search">
+          
+          <label for="startDate">Start Date:</label>
+  <input type="date" id="startDate">
+
+  <label for="endDate">End Date:</label>
+  <input type="date" id="endDate">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>IO#</th>
+                  <th>Status</th>
+                  <th>CM</th>
+                  <th>BO / CE Ref</th>
+                  <th>Brand New</th>
+                  <th>Sub-Brand</th>
+                  <th>Brand + Sub Brand</th>
+                  <th>Business Model</th>
+                  <th>BM Codee</th>
+                  <th>Industry</th>
+                  <th>Campaign Name</th>
+                  <th>Complete Campaign Name</th>
+                  <th>Platform</th>
+                  <th>Buy Type</th>
+                  <th>Objective</th>
+                  <th>Conversion Location</th>
+                  <th>Performance Goal</th>
+                  <th>When you get charged</th>
+                  <th>Budget Allocation</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Budget</th>
+                  <th>FOREX</th>
+                  <th>Budget $</th>
+                  <th>Unit Cost</th>
+                  <th>KPI</th>
+                  <th>Margin/Fee</th>
+                  <th>BM Currency</th>
+                  <th>Media Budget</th>
+                  <th>Result</th>
+                  <th>Campaign ID</th>
+                  <th>Remarks</th>
+                  <th>Status</th>
+                  <th>Campagin Manager</th>
+                  <th>Platform</th>
+                  <th>Buy Type</th>
+                  <th>Objective</th>
+                  <th>Conversion Location</th>
+                  <th>Performance Goal</th>
+                  <th>When you get charged</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>                 
+                  <td>
+                  <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>  
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>  
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td>
+                      <a href="OpstableEdit.html"><button class="edit-button">Edit</button></a> 
+                  <a href="OpsTableAddnew.html"><button class="add-new-button">Add New</button></a>  
+                  </td>
+                </tr>
+              </tbody>
+              
+            </table>
+          
+            
+          
+          
+            
+          </div>
+
+    </main>
+
+</div>
+
+<script src="ampliva-emp-dashboard.js"></script>
+
+</body>
+
+</html>
